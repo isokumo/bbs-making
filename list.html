@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mybbs</title>
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <div class="container pt-5">
+        <h1 class="text-center">자유게시판</h1>
+        <p class="text-center mb-5 pb-5">jsp + servlet으로 디자인할 자유게시판입니다.</p>
+        <div class="search-box">
+            <form name="search-form" method="get" class="d-flex justify-content-center">
+                <div class="select-box">
+                    <div class="selected">--검색선택--<i class="ri-arrow-down-s-line"></i></div>
+                    <ul class="options">
+                        <li data-value="author">이름검색</li>
+                        <li data-value="title">제목검색</li>
+                        <li data-value="content">내용검색</li>
+                    </ul>
+                </div>
+                <input type="search" class="search-input" placeholder="검색...">
+                <button type="submit" class="btn-search">검색</button>
+                <button type="reset" class="btn-search">초기화</button>
+            </form>
+        </div> <!--/search-box-->
+
+        <div class="d-flex justify-content-between">
+            <div class="init-text d-flex">
+                <div class="all-text"><i class="ri-file-list-line"></i> 총 게시물<span>123</span>건</div>
+                <div class="now-text">현재 페이지<span>1/12</span></div>
+            </div>
+            <div class="sortting">
+                <span>페이지당 목록</span>
+                <div class="list-ct">10</div>
+            </div>
+        </div>
+
+        <table class="list-table">
+            <colgroup>
+                <col width="5%">
+                <col>
+                <col width="10%">
+                <col width="10%">
+                <col width="10%">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>글쓴이</th>
+                    <th>날짜</th>
+                    <th>조회수</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!--루프-->
+                <tr>
+                    <td>1</td>
+                    <td><a href="#">안녕하세요</a></td>
+                    <td>김*수</td>
+                    <td>2025-02-17</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><a href="#">안녕하세요</a></td>
+                    <td>김*수</td>
+                    <td>2025-02-17</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><a href="#">안녕하세요</a></td>
+                    <td>김*수</td>
+                    <td>2025-02-17</td>
+                    <td>2</td>
+                </tr>
+                <!--/루프-->
+            </tbody>
+        </table>
+        
+    </div>
+</body>
+</html>
