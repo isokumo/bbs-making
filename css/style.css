@@ -28,7 +28,11 @@ a, a:link{
 a:hover{
     color: var(--secondary);
 }
-
+.list-style-none{
+    list-style:none;
+    margin: 0;
+    padding: 0;
+}
 
 .mt-10{margin-top:10px;}
 .mt-20{margin-top:20px;}
@@ -220,4 +224,44 @@ tbody tr{
 }
 tbody tr:hover{
     background:var(--bg-light);
+}
+/******************버튼*****************/
+a.btn{
+    border: none;
+    background: var(--text-dark);
+    color: #fff;
+    padding: 8px 20px;
+    cursor: pointer;
+}
+a.btn:hover{
+    background: var(--secondary);
+}
+
+/**********페이징 ************/
+.paging{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.paging li{
+    border: 1px solid var(--secondary);
+    border-left: none;
+}
+.paging li:first-child{
+    border-left:1px solid var(--secondary);
+}
+.paging li a{
+    display: block;
+    padding: 4px 10px;
+    font-size: 14px;
+}
+.paging li a.act{
+    background: var(--secondary);
+    color: #fff;
+}
+.paging li a:hover{
+    background: var(--primary);
+    color: #fff;
 }
